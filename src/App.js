@@ -1,23 +1,26 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { fetchData } from "./api";
+import axios from "axios";
+
+const url = "https://covid19.mathdro.id/api/countries/Philippines";
 
 const App = () => {
-  // state = {
-  //   data: {}
-  // };
-
   const [data, setData] = useState([]);
 
-  const componentDidMount = async () => {
-    const fetchedData = await fetchData();
-    this.setState({ data: fetchedData });
-  };
+  axios.get(url).then(response => {
+    console.log("promise fulfilled");
+    setData(response.data);
+  });
 
-  console.log(fetchData.data);
+  console.log(`confirmed data : ${data[0]}`);
 
-  return <div>test</div>;
+  return (
+    <div>
+      <h3>Confirmed</h3>
+      <h1></h1>
+    </div>
+  );
 };
 
 export default App;
