@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 
@@ -23,11 +23,13 @@ const App = () => {
   const [recovered, setRecovered] = useState("");
   const [deaths, setDeaths] = useState("");
 
-  axios.get(url).then(response => {
-    setConfirmed(response.data.confirmed);
-    setRecovered(response.data.recovered);
-    setDeaths(response.data.deaths);
-  });
+  useEffect(() => {
+    axios.get(url).then(response => {
+      setConfirmed(response.data.confirmed);
+      setRecovered(response.data.recovered);
+      setDeaths(response.data.deaths);
+    });
+  }, []);
 
   return (
     <div>
