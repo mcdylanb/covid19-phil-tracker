@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import Card from "./components/Card.js";
 
 const url = "https://covid19.mathdro.id/api/countries/Philippines";
 
@@ -8,15 +9,6 @@ const url = "https://covid19.mathdro.id/api/countries/Philippines";
  * [ ] move components into seperate file
  * [ ] move the api into seperate file
  */
-
-const Card = ({ name, value }) => {
-  return (
-    <div>
-      <h1>{name}</h1>
-      <h3>{value}</h3>
-    </div>
-  );
-};
 
 const App = () => {
   const [confirmed, setConfirmed] = useState("");
