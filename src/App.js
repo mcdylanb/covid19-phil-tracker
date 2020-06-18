@@ -6,19 +6,19 @@ import axios from "axios";
 const url = "https://covid19.mathdro.id/api/countries/Philippines";
 
 const App = () => {
-  const [data, setData] = useState([]);
+  const [confirmed, setConfirmed] = useState([]);
 
   axios.get(url).then(response => {
     console.log("promise fulfilled");
-    setData(response.data);
+    setConfirmed(response.data.confirmed);
   });
 
-  console.log(`confirmed data : ${data[0]}`);
+  console.log(`confirmed data : ${confirmed.value}`);
 
   return (
     <div>
       <h3>Confirmed</h3>
-      <h1></h1>
+      <h1> {confirmed.value}</h1>
     </div>
   );
 };
