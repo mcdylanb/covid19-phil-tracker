@@ -24,15 +24,10 @@ const App = () => {
   const [deaths, setDeaths] = useState("");
 
   axios.get(url).then(response => {
-    console.log("promise fulfilled");
     setConfirmed(response.data.confirmed);
     setRecovered(response.data.recovered);
     setDeaths(response.data.deaths);
   });
-
-  // console.log(`confirmed data : ${confirmed.value}`);
-  // console.log(`confirmed data : ${recovered.value}`);
-  // console.log(`confirmed data : ${deaths.value}`);
 
   return (
     <div>
