@@ -4,6 +4,11 @@ import axios from "axios";
 
 const url = "https://covid19.mathdro.id/api/countries/Philippines";
 
+/* TODO
+ * [ ] move components into seperate file
+ * [ ] move the api into seperate file
+ */
+
 const Card = ({ name, value }) => {
   return (
     <div>
@@ -14,9 +19,9 @@ const Card = ({ name, value }) => {
 };
 
 const App = () => {
-  const [confirmed, setConfirmed] = useState([]);
-  const [recovered, setRecovered] = useState([]);
-  const [deaths, setDeaths] = useState([]);
+  const [confirmed, setConfirmed] = useState("");
+  const [recovered, setRecovered] = useState("");
+  const [deaths, setDeaths] = useState("");
 
   axios.get(url).then(response => {
     console.log("promise fulfilled");
