@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
-import Card from "./components/Card.js";
+import CardData from "./components/CardData.js";
+import Grid from "@material-ui/core/Grid";
 
 const url = "https://covid19.mathdro.id/api/countries/Philippines";
 
@@ -25,9 +26,26 @@ const App = () => {
 
   return (
     <div>
-      <Card name=" Confirmed " value={confirmed.value} />
-      <Card name=" Recovered " value={recovered.value} />
-      <Card name=" Deaths " value={deaths.value} />
+      <Grid
+        container
+        spacing={2}
+        className="customize-grid"
+        alignItems="center"
+        alignContent="space-around"
+        justify="center"
+        style={{ minHeight: "100vh" }}
+      >
+        <Grid item xs={4} md={8}>
+          <CardData name=" Confirmed " value={confirmed.value} />
+        </Grid>
+
+        <Grid item xs={4} md={8}>
+          <CardData name=" Recovered " value={recovered.value} />
+        </Grid>
+        <Grid item xs={4} md={8}>
+          <CardData name=" Deaths " value={deaths.value} />
+        </Grid>
+      </Grid>
     </div>
   );
 };
