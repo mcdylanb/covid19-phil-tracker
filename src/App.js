@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import axios from "axios";
 import CardData from "./components/CardData.js";
-import Grid from "@material-ui/core/Grid";
+import { Grid, Typography } from "@material-ui/core";
 
 const url = "https://covid19.mathdro.id/api/countries/Philippines";
 
@@ -28,21 +27,19 @@ const App = () => {
     <div>
       <Grid
         container
-        spacing={2}
-        className="customize-grid"
+        spacing={0}
         alignItems="center"
-        alignContent="space-around"
         justify="center"
         style={{ minHeight: "100vh" }}
       >
-        <Grid item xs={4} md={8}>
+        <Grid item xs={8}>
           <CardData name=" Confirmed " value={confirmed.value} />
         </Grid>
 
-        <Grid item xs={4} md={8}>
+        <Grid item xs={8}>
           <CardData name=" Recovered " value={recovered.value} />
         </Grid>
-        <Grid item xs={4} md={8}>
+        <Grid item xs={8}>
           <CardData name=" Deaths " value={deaths.value} />
         </Grid>
       </Grid>
