@@ -46,6 +46,8 @@ const App = () => {
           <Typography variant="h4" align="center">
             Start From Us!
           </Typography>
+
+          {/* action buttons */}
           <Grid container>
             <Grid item>
               <Button variant="contained" color="primary">
@@ -53,7 +55,7 @@ const App = () => {
               </Button>
             </Grid>
             <Grid item>
-              <Button variant="contained" color="secondary">
+              <Button variant="outlined" color="secondary">
                 Watch Video
               </Button>
             </Grid>
