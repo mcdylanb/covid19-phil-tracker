@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CardData from "./components/CardData.js";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const url = "https://covid19.mathdro.id/api/countries/Philippines";
@@ -46,6 +46,18 @@ const App = () => {
           <Typography variant="h4" align="center">
             Start From Us!
           </Typography>
+          <Grid container>
+            <Grid item>
+              <Button variant="contained" color="primary">
+                Learn More
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button variant="contained" color="secondary">
+                Watch Video
+              </Button>
+            </Grid>
+          </Grid>
         </Grid>
         <Grid item xs={8}>
           <CardData name=" Confirmed " value={confirmed.value} />
