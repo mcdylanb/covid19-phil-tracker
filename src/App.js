@@ -31,36 +31,53 @@ const App = () => {
     <div>
       <Grid
         container
-        spacing={0}
+        spacing={2}
         alignItems="center"
         justify="center"
         style={{ minHeight: "100vh" }}
       >
         <Grid item xs={10}>
-          <Typography variant="h4" align="center">
-            Lets Help
-          </Typography>
-          <Typography variant="h4" align="center">
-            Recover The Earth
-          </Typography>
-          <Typography variant="h4" align="center">
-            Start From Us!
-          </Typography>
-
-          {/* action buttons */}
+          {/* intro text */}
           <Grid container>
             <Grid item>
+              <Typography variant="h4" align="center">
+                Lets Help
+              </Typography>
+              <Typography variant="h4" align="center">
+                Recover The Earth
+              </Typography>
+              <Typography variant="h4" align="center">
+                Start From Us!
+              </Typography>
+            </Grid>
+          </Grid>
+
+          {/* additional text */}
+          <Grid container>
+            <Grid item>
+              <Typography>
+                The outbreak of the coronavirus issue or called Covid-19 makes
+                the Earth grieve
+              </Typography>
+            </Grid>
+          </Grid>
+
+          {/* action buttons */}
+          <Grid container spacing={2} alignItems="center" justify="center">
+            <Grid item xs={6}>
               <Button variant="contained" color="primary">
                 Learn More
               </Button>
             </Grid>
-            <Grid item>
+            <Grid item xs={6}>
               <Button variant="outlined" color="secondary">
                 Watch Video
               </Button>
             </Grid>
           </Grid>
         </Grid>
+
+        {/* stats */}
         <Grid item xs={8}>
           <CardData name=" Confirmed " value={confirmed.value} />
         </Grid>
