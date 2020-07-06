@@ -36,6 +36,17 @@ const App = () => {
         justify="center"
         style={{ minHeight: "100vh" }}
       >
+        <Grid item xs={10}>
+          <Typography variant="h4" align="center">
+            Lets Help
+          </Typography>
+          <Typography variant="h4" align="center">
+            Recover The Earth
+          </Typography>
+          <Typography variant="h4" align="center">
+            Start From Us!
+          </Typography>
+        </Grid>
         <Grid item xs={8}>
           <CardData name=" Confirmed " value={confirmed.value} />
         </Grid>
