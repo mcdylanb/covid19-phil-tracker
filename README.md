@@ -2,6 +2,8 @@
 
 A tracker that shows sync data of cases, deaths, and recovered in the Philippines 🇵🇭
 
+- [live](https://covid-19-phil.netlify.app/)
+
 ### Current State
 
 ![alt text](./assets/readme-files/reactapp.png "Current state of work")
@@ -12,12 +14,12 @@ A tracker that shows sync data of cases, deaths, and recovered in the Philippine
 
 # Prerequisite
 
-[yarn](https://yarnpkg.com/getting-started)
-[node](https://nodejs.org/en/)
+- [yarn](https://yarnpkg.com/getting-started)
+- [node](https://nodejs.org/en/)
 
 # Installation
 
-```bash
+```shell
 git clone https://github.com/mcdylanb/covid19-phil-tracker.git
 cd covid19-phil-tracker
 yarn install
