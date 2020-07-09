@@ -67,7 +67,7 @@ const App = () => {
           xs={8}
         >
           <Grid item>
-            <Typography>
+            <Typography align="center">
               The outbreak of the coronavirus issue or called Covid-19 makes the
               Earth grieve
             </Typography>
@@ -84,7 +84,7 @@ const App = () => {
           spacing={2}
           xs={8}
         >
-          <Grid item xs={6}>
+          <Grid item xs={6} sm={6}>
             <Button
               variant="contained"
               color="primary"
@@ -93,7 +93,7 @@ const App = () => {
               Learn More
             </Button>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={6} sm={6}>
             <Button
               variant="outlined"
               color="secondary"
