@@ -105,15 +105,15 @@ const App = () => {
         </Grid>
 
         {/* stats */}
-        <Grid container direction="column" spacing={2} item xs={12}>
-          <Grid item xs={12}>
+        <Grid container spacing={2} item xs={12}>
+          <Grid item xs={12} sm={4}>
             <CardData name=" Confirmed " value={confirmed.value} />
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid item xs={12} sm={4}>
             <CardData name=" Recovered " value={recovered.value} />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} sm={4}>
             <CardData name=" Deaths " value={deaths.value} />
           </Grid>
         </Grid>
