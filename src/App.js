@@ -26,7 +26,7 @@ const App = () => {
       <Grid
         container
         direction="column"
-        spacing={2}
+        spacing={3}
         alignItems="center"
         justify="center"
       >
@@ -39,7 +39,7 @@ const App = () => {
           item
           xs={10}
         >
-          <Grid item xs={10}>
+          <Grid item xs={12}>
             {/* intro text */}
             <Typography variant="h4" align="center">
               Lets Help
@@ -81,6 +81,7 @@ const App = () => {
           alignItems="center"
           justify="center"
           direction="row"
+          spacing={2}
           xs={8}
         >
           <Grid item xs={6}>
@@ -96,15 +97,7 @@ const App = () => {
         </Grid>
 
         {/* stats */}
-        <Grid
-          container
-          direction="column"
-          spacing={2}
-          alignItems="center"
-          justify="center"
-          item
-          xs={10}
-        >
+        <Grid container direction="column" spacing={2} item xs={12}>
           <Grid item xs={12}>
             <CardData name=" Confirmed " value={confirmed.value} />
           </Grid>
