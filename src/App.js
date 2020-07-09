@@ -85,12 +85,20 @@ const App = () => {
           xs={8}
         >
           <Grid item xs={6}>
-            <Button variant="contained" color="primary">
+            <Button
+              variant="contained"
+              color="primary"
+              href="http://www.covid19.gov.ph/"
+            >
               Learn More
             </Button>
           </Grid>
           <Grid item xs={6}>
-            <Button variant="outlined" color="secondary">
+            <Button
+              variant="outlined"
+              color="secondary"
+              href="https://www.youtube.com/playlist?list=PLvrp9iOILTQaJa78zFQ0QgvShQ2HEwHxP"
+            >
               Watch Video
             </Button>
           </Grid>
